@@ -1,0 +1,20 @@
+<ol>
+  <li>Add a button which says </li>
+  <li>Add a paragraph with dummy data</li>
+  <li>Toggle the displaying of that paragraph with the buttonn created in the first step</li>
+  <li>Log all button click in an array and output the array below the paragraph (timestamp or incrementing number)</li>
+  <li>Starting from the fifth log item, give yellow background (ngStyle) and white color (ngClass)</li>
+</ol>
+
+<hr>
+
+<button class="btn btn-primary" (click)="toggleParagraph()">Display Details</button>
+
+<p *ngIf="displayContent"> this is some dummy text</p>
+
+<div *ngFor="let log of logs; let i = index" [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text' : i >= 5}">
+  {{log}}
+
+
+</div>
