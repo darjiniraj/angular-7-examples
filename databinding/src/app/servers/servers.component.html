@@ -1,0 +1,25 @@
+<app-server></app-server>
+
+
+<hr>
+<h4>Property Binding and Event Binding Example</h4>
+<button  
+class="btn btn-primary"
+[disabled] = "!allowNewServer"
+(click) = "onServerCreation()"
+>Add New Server</button>
+
+<p> {{serverCreationStatus}}</p>
+
+<label>Server Name With Event Binding</label>
+<input type="text"
+ class="form-control" 
+ (input) = "onUpdateServerName($event)"/>
+ <p>{{serverName}}</p>
+ <hr>
+
+ <label>Server Name with Two-way DataBinding</label>
+<input type="text"
+ class="form-control" 
+ [(ngModel)]="serverName"/>
+ <p>{{serverName}}</p>

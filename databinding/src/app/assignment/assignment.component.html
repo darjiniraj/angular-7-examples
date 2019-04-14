@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <ol>
+        <li> Add a input field which updates a property "studentName" using two-way databinding</li>
+        <li> Output the studentName property via String interpolation</li>
+        <li> Add a button which may only be clicked if the username is NOT an empty string</li>
+        <li> Upon clicking the button, the username should be reset to an empty String</li>
+      </ol>
+      <hr>
+      <label>Student Name</label>
+      <input type="text" class="form-control" [(ngModel)]="studentName">
+
+      <p> Name of Student is {{studentName}}</p>
+
+      <button class="btn btn-primary" [disabled]="!buttonBehaviour()" (click)="resetStudentName()">
+        Reset User</button>
+
+    </div>
+  </div>
+</div>
