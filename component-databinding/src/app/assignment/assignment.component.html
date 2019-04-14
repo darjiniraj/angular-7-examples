@@ -1,0 +1,12 @@
+<ol>
+  <li>create three component: GameControl, Odd, Even</li>
+  <li>GameControl should have buttosn to start and stop the game</li>
+  <li>when starting the game, event should be emitted</li>
+</ol>
+
+<hr>
+
+<app-gamecontrol (gameStarted)="gameStarted($event)"></app-gamecontrol>
+
+<app-odd *ngFor="let number of oddNumbers" [number]="number"></app-odd>
+<app-even *ngFor="let number of evenNumbers" [number]="number"></app-even>
